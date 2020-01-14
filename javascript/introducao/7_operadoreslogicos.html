@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Starter - Rocketseat</title>
+</head>
+<body>
+    <div>
+        <h3>
+            Introdução - Operadores Lógicos
+        </h3>
+        Ver código/console (F12)
+    </div>
+    <script>
+        //AND &&
+        let sexo = 'M', idade = 23
+
+        if (sexo === 'M' && idade > 18) {
+            console.log('OK - Ambas as condicionais são verdadeiras')
+        }
+
+        //OR ||
+        sexo = 'F', idade = 24
+        
+        if (sexo === 'M' || idade > 18) {
+            console.log('OK - Uma das condicionais é verdadeira')
+        }
+
+        //NOT !
+
+        sexo = 'M'
+
+        if (sexo !== 'M') {
+            console.log('OK - Sexo NÃO é "M"')
+        }
+        
+        //Armazenando valor da condicional
+
+        sexo = 'F'
+        let masculino = (sexo === 'M')
+
+        console.log('Valor sexo é Masculino: ' + masculino)
+    </script>
+</body>
+</html>

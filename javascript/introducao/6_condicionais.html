@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Starter - Rocketseat</title>
+</head>
+<body>
+    <div>
+        <h3>
+            Introdução - Condicionais
+        </h3>
+        Ver código/console (F12)
+    </div>
+    <script>
+        function retornaSexo(sexo) {
+            // M, F
+            // Masculino, Feminino
+
+            if (sexo == 'M' || sexo == 'm') {
+                return 'Masculino'
+            } else if (sexo == 'F' || sexo == 'f') {
+                return 'Feminino'
+            } else {
+                return 'Outro'
+            }
+            
+        }
+
+        // switch:case pode ser utilizado em multiplos elseifs
+
+        console.log(retornaSexo('F'))
+        console.log(retornaSexo('f'))
+        console.log(retornaSexo('M'))
+        console.log(retornaSexo('9'))
+    </script>
+</body>
+</html>

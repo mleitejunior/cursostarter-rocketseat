@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Curso Starter - Rocketseat</title>
 </head>
 <body>
+    <div>
+        <h3>
+            Manipular a DOM - Events inline
+        </h3>
+        Ver código/console (F12)
+    </div>
     <div id="app">
         <!-- Pode usar outros on (onmousealert etc) -->
         <button onclick='mostraAlerta()'>Me pressione</button>
-        <input onkeypress="mostraAlerta()">
+        <input onkeypress="mostraAlertaTecla()">
     </div>
     
     <script>
         function mostraAlerta() {
             alert('Botão foi clicado')
+        }
+        
+        function mostraAlertaTecla() {
+            alert('Tecla foi pressionada')
         }
     </script>
 </body>

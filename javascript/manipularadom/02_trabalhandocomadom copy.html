@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Starter - Rocketseat</title>
+</head>
+<body>
+    <div>
+        <h3>
+            Manipular a DOM - Manipulando a DOM
+        </h3>
+        Ver código/console (F12)
+    </div>
+    <div id="app">
+        <input type="text" name="nameNome" id="idNome" class="classNome">
+        <button class="botao">Adicionar</button>
+    </div>
+    
+    <script>
+        let inputElement = document.getElementById('idNome')
+        console.log(inputElement)
+
+        inputElement = document.getElementsByTagName('input')
+        console.log(inputElement)
+        inputElement = document.getElementsByTagName('input')[0]
+        console.log(inputElement)
+
+        inputElement.getElementsByClassName('classNome')
+        console.log(inputElement)
+        inputElement.getElementsByClassName('classNome')[0]
+        console.log(inputElement)
+        
+        //querySelector só retorna o primeiro elemento encontrado
+        //querySelectorAll retorna o HTMLCollection de elementos encontrados
+        inputElement = document.querySelector('div#app button')
+        console.log(inputElement)
+
+        inputElement = document.querySelector('input[name="nameNome"]')
+        console.log(inputElement)
+
+        let btnElement = document.querySelector('button.botao')
+        console.log(btnElement)
+
+        btnElement.onclick = function() {
+            let text = inputElement.value
+            alert('Input = ' + text)
+        }
+    </script>
+</body>
+
+</html>

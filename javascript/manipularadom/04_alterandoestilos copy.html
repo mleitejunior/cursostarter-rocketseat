@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Starter - Rocketseat</title>
+</head>
+<body>
+    <div>
+        <h3>
+            Manipular a DOM - Alterando estilos
+        </h3>
+        Ver código/console (F12)
+    </div>
+    <div id="app">
+        <div class="box"></div>
+        <!-- <div class='box' style='width: 100px; height: 100px; background-color: red;' ></div> -->
+    </div>
+    
+    <script>
+        let boxElement = document.querySelector('.box')
+
+        boxElement.style.width = '100px';
+        boxElement.style.height = '100px';
+        boxElement.style.backgroundColor = '#f00';
+    </script>
+</body>
+
+</html>

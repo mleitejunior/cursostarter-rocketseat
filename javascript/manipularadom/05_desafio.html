@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Starter - Rocketseat</title>
+</head>
+<body>
+    <div>
+        <h3>
+            Manipular a DOM - Desafio
+        </h3>
+        <a href="https://skylab.rocketseat.com.br/api/files/1566499161406.pdf">LINK DO DESAFIO</a>
+        <br>
+        Ver código/console (F12)
+    </div>
+    <div id="app">
+        <button id="btnCriador">Criador de Quadrados</button>
+        <ul id="lista"></ul>
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+    </div>
+    
+    <script>
+        //Exercício 1
+        let containerElement = document.querySelector('#app')
+        let btnCriador = document.querySelector('#btnCriador')
+        
+
+        btnCriador.onclick = function() {
+            let squareElement = document.createElement('div')
+            squareElement.style.width = '100px';
+            squareElement.style.height = '100px';
+            squareElement.style.borderStyle = 'groove';
+            squareElement.style.backgroundColor = '#f00';
+            squareElement.setAttribute('id', 'square')
+            
+            //Parte do Exercício 2
+            squareElement.onmouseover = function() {
+                let newColor = getRandomColor(); // #E943F0
+                squareElement.style.backgroundColor = newColor;
+            }
+
+            containerElement.appendChild(squareElement)
+        }
+        //Exercício 2 (possui codigos em exercício 1)
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        //Exercício 3
+        let nomes = ["Diego", "Gabriel", "Lucas"];
+        listContainer = document.querySelector('#lista')
+
+        for (let a of nomes) {
+            let textElement = document.createTextNode(a)
+            let listElement = document.createElement('li')
+
+            listElement.appendChild(textElement)
+            listContainer.appendChild(listElement)
+        }
+
+        //Exercício 4
+        function adicionar() {
+            let inputName = document.querySelector('input[name="nome"]')
+
+            let textElement = document.createTextNode(inputName.value)
+            let listElement = document.createElement('li')
+
+            listElement.appendChild(textElement)
+            listContainer.appendChild(listElement)
+        }
+
+
+    </script>
+</body>
+
+</html>
